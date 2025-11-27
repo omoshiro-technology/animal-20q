@@ -1,0 +1,51 @@
+taxonID,alias,language
+Animalia,動物界,ja
+Chordata,脊索動物門,ja
+Vertebrata,脊椎動物亜門,ja
+Mammalia,哺乳綱,ja
+Aves,鳥綱,ja
+Reptilia,爬虫綱,ja
+Amphibia,両生綱,ja
+Osteichthyes,硬骨魚綱,ja
+Chondrichthyes,軟骨魚綱,ja
+Carnivora,食肉目,ja
+Phocidae,アザラシ科,ja
+Otariidae,アシカ科,ja
+Odobenidae,セイウチ科,ja
+Phoca vitulina,ゼニガタアザラシ,ja
+Phoca vitulina,Harbor seal,en
+Phoca vitulina,Common seal,en
+Phoca largha,ゴマフアザラシ,ja
+Phoca largha,Spotted seal,en
+Phoca largha,Largha seal,en
+Mirounga angustirostris,キタゾウアザラシ,ja
+Mirounga angustirostris,Northern elephant seal,en
+Mirounga leonina,ミナミゾウアザラシ,ja
+Mirounga leonina,Southern elephant seal,en
+Cystophora cristata,ズキンアザラシ,ja
+Cystophora cristata,Hooded seal,en
+Pusa hispida,ワモンアザラシ,ja
+Pusa hispida,Ringed seal,en
+Pusa sibirica,バイカルアザラシ,ja
+Pusa sibirica,Baikal seal,en
+Halichoerus grypus,ハイイロアザラシ,ja
+Halichoerus grypus,Grey seal,en
+Halichoerus grypus,Gray seal,en
+Pagophilus groenlandicus,タテゴトアザラシ,ja
+Pagophilus groenlandicus,Harp seal,en
+Histriophoca fasciata,クラカケアザラシ,ja
+Histriophoca fasciata,Ribbon seal,en
+Erignathus barbatus,アゴヒゲアザラシ,ja
+Erignathus barbatus,Bearded seal,en
+Lobodon carcinophaga,カニクイアザラシ,ja
+Lobodon carcinophaga,Crabeater seal,en
+Hydrurga leptonyx,ヒョウアザラシ,ja
+Hydrurga leptonyx,Leopard seal,en
+Leptonychotes weddellii,ウェッデルアザラシ,ja
+Leptonychotes weddellii,Weddell seal,en
+Ommatophoca rossii,ロスアザラシ,ja
+Ommatophoca rossii,Ross seal,en
+Monachus monachus,チチュウカイモンクアザラシ,ja
+Monachus monachus,Mediterranean monk seal,en
+Neomonachus schauinslandi,ハワイモンクアザラシ,ja
+Neomonachus schauinslandi,Hawaiian monk seal,en

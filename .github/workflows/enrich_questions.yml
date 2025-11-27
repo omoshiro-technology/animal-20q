@@ -1,0 +1,122 @@
+name: Enrich questions
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # Every 15 minutes
+  workflow_dispatch:         # Allow manual trigger
+    inputs:
+      max_drafts:
+        description: 'Maximum questions to generate'
+        required: false
+        default: '40'
+      use_wikipedia:
+        description: 'Use Wikipedia API for verification'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+      use_llm:
+        description: 'Use Claude Haiku 4.5 for question generation'
+        required: false
+        default: 'true'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -U pandas requests pyyaml
+
+      - name: Draft questions
+        env:
+          MAX_DRAFTS: ${{ github.event.inputs.max_drafts || '40' }}
+          USE_WIKIPEDIA: ${{ github.event.inputs.use_wikipedia || 'false' }}
+          USE_LLM: ${{ github.event.inputs.use_llm || 'true' }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          # Check if API key is available for LLM mode
+          if [ "$USE_LLM" = "true" ] && [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "Warning: USE_LLM=true but ANTHROPIC_API_KEY secret not set"
+            echo "Falling back to rule-based generation"
+            USE_LLM="false"
+          fi
+
+          python scripts/draft_questions.py \
+            --taxonomy data/taxonomy.jsonl \
+            --questions data/questions.jsonl \
+            --rules rules/templates.yaml \
+            --traits rules/traits_core.yaml \
+            --max $MAX_DRAFTS \
+            --use-wikipedia $USE_WIKIPEDIA \
+            --use-llm $USE_LLM \
+            --out data/questions.jsonl
+
+      - name: Copy to Pages
+        run: |
+          python scripts/copy_to_pages.py --data data/ --docs docs/
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "new_count=0" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            # Count new questions (approximate)
+            NEW_COUNT=$(git diff --cached --stat data/questions.jsonl 2>/dev/null | grep -oP '\d+(?= insertion)' || echo "0")
+            echo "new_count=$NEW_COUNT" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "feat(questions): auto-drafted Yes/No questions"
+          title: "Questions: new drafts (${{ steps.changes.outputs.new_count }} new)"
+          body: |
+            ## Summary
+            - Drafted new Yes/No questions for taxonomy nodes
+            - Total new questions: ~${{ steps.changes.outputs.new_count }}
+            - Generation method: ${{ github.event.inputs.use_llm == 'true' && 'Claude Haiku 4.5' || 'Rule-based' }}
+
+            ## Review checklist
+            Please review each new question for:
+            - [ ] **形質のみ**: 質問は分類学的特徴（形態・解剖学）のみに基づいているか
+            - [ ] **Yes/No明確**: 質問に明確にYes/Noで回答できるか
+            - [ ] **出典**: sources/refs が適切に記載されているか
+            - [ ] **confidence**: confidence < 0.8 の質問は特に注意して確認
+            - [ ] **LLM生成**: `sources` に "llm" がある質問は特に注意
+
+            ## How to review
+            1. `data/questions.jsonl` の diff を確認
+            2. 各質問の `question` フィールドをチェック
+            3. 問題があれば修正をコミットしてからマージ
+
+            ---
+            🤖 Generated automatically by GitHub Actions
+          branch: feat/questions-daily
+          delete-branch: true
+          labels: |
+            automated
+            questions
+            needs-review

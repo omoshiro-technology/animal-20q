@@ -1,0 +1,614 @@
+# traits_core.yaml
+# 分類学の決定形質カタログ
+# 各ノードに対してYes/No質問を生成するための形質情報
+
+# ===== 界レベル =====
+Animalia:
+  hint: "多細胞で従属栄養（他の生物を摂食）"
+  rank: kingdom
+
+# ===== 門レベル =====
+Porifera:
+  hint: "体に孔（小孔・大孔）があり、水を通して濾過摂食する海綿動物"
+  rank: phylum
+  parent: Animalia
+
+Cnidaria:
+  hint: "刺胞（毒針を持つ細胞）を持つ"
+  rank: phylum
+  parent: Animalia
+
+Platyhelminthes:
+  hint: "扁平な体で体腔がない扁形動物"
+  rank: phylum
+  parent: Animalia
+
+Nematoda:
+  hint: "細長い円筒形の体を持つ線形動物"
+  rank: phylum
+  parent: Animalia
+
+Annelida:
+  hint: "体が環節（体節）に分かれている環形動物"
+  rank: phylum
+  parent: Animalia
+
+Mollusca:
+  hint: "軟体で外套膜を持つ軟体動物"
+  rank: phylum
+  parent: Animalia
+
+Arthropoda:
+  hint: "外骨格と関節のある脚を持つ節足動物"
+  rank: phylum
+  parent: Animalia
+
+Echinodermata:
+  hint: "五放射相称で水管系を持つ棘皮動物"
+  rank: phylum
+  parent: Animalia
+
+Chordata:
+  hint: "脊索（または脊椎）・咽頭裂・背側神経管を持つ"
+  rank: phylum
+  parent: Animalia
+
+# ===== 脊索動物門の亜門 =====
+Vertebrata:
+  hint: "脊椎骨（背骨）を持つ"
+  rank: subphylum
+  parent: Chordata
+
+Tunicata:
+  hint: "被嚢（チュニック）に覆われ、幼生期のみ脊索を持つ"
+  rank: subphylum
+  parent: Chordata
+
+Cephalochordata:
+  hint: "終生脊索を保持するナメクジウオ類"
+  rank: subphylum
+  parent: Chordata
+
+# ===== 脊椎動物の綱 =====
+Agnatha:
+  hint: "顎がない無顎類（ヤツメウナギ・ヌタウナギ）"
+  rank: class
+  parent: Vertebrata
+
+Chondrichthyes:
+  hint: "軟骨性の骨格を持つ（サメ・エイ類）"
+  rank: class
+  parent: Vertebrata
+
+Osteichthyes:
+  hint: "硬骨性の骨格を持つ魚類"
+  rank: class
+  parent: Vertebrata
+
+Amphibia:
+  hint: "変態を行い、皮膚呼吸が可能な両生類"
+  rank: class
+  parent: Vertebrata
+
+Reptilia:
+  hint: "乾燥した鱗で覆われ、羊膜卵を産む爬虫類"
+  rank: class
+  parent: Vertebrata
+
+Aves:
+  hint: "羽毛を持ち、前肢が翼に変化している鳥類"
+  rank: class
+  parent: Vertebrata
+
+Mammalia:
+  hint: "毛と乳腺を持つ哺乳類"
+  rank: class
+  parent: Vertebrata
+
+# ===== 哺乳類の目 =====
+Monotremata:
+  hint: "卵を産む哺乳類（カモノハシ・ハリモグラ）"
+  rank: order
+  parent: Mammalia
+
+Marsupialia:
+  hint: "育児嚢（袋）で子を育てる有袋類"
+  rank: order
+  parent: Mammalia
+
+Rodentia:
+  hint: "一生伸び続ける門歯を持つ齧歯類"
+  rank: order
+  parent: Mammalia
+
+Lagomorpha:
+  hint: "上顎の門歯が2対あるウサギ目"
+  rank: order
+  parent: Mammalia
+
+Chiroptera:
+  hint: "飛膜で飛行可能な翼手目（コウモリ）"
+  rank: order
+  parent: Mammalia
+
+Primates:
+  hint: "対向性の親指と前向きの眼を持つ霊長目"
+  rank: order
+  parent: Mammalia
+
+Carnivora:
+  hint: "裂肉歯を持つ食肉目"
+  rank: order
+  parent: Mammalia
+
+Cetacea:
+  hint: "完全水生で後肢が退化したクジラ目"
+  rank: order
+  parent: Mammalia
+
+Sirenia:
+  hint: "草食性の完全水生哺乳類（ジュゴン・マナティー）"
+  rank: order
+  parent: Mammalia
+
+Proboscidea:
+  hint: "長い鼻（象鼻）を持つ長鼻目"
+  rank: order
+  parent: Mammalia
+
+Perissodactyla:
+  hint: "奇数の蹄を持つ奇蹄目（ウマ・サイ・バク）"
+  rank: order
+  parent: Mammalia
+
+Artiodactyla:
+  hint: "偶数の蹄を持つ偶蹄目"
+  rank: order
+  parent: Mammalia
+
+# ===== 食肉目の科 =====
+Canidae:
+  hint: "長い吻と非引込式の爪を持つイヌ科"
+  rank: family
+  parent: Carnivora
+
+Felidae:
+  hint: "引込式の爪と短い吻を持つネコ科"
+  rank: family
+  parent: Carnivora
+
+Ursidae:
+  hint: "大型で蹠行性のクマ科"
+  rank: family
+  parent: Carnivora
+
+Mustelidae:
+  hint: "細長い体と短い脚のイタチ科"
+  rank: family
+  parent: Carnivora
+
+Otariidae:
+  hint: "外耳介があり前肢で歩行可能なアシカ科"
+  rank: family
+  parent: Carnivora
+
+Odobenidae:
+  hint: "長い牙を持つセイウチ科"
+  rank: family
+  parent: Carnivora
+
+Phocidae:
+  hint: "外耳介がなく前肢が短いアザラシ科"
+  rank: family
+  parent: Carnivora
+
+# ===== アザラシ科の詳細質問 =====
+Phocidae_questions:
+  - id: P1
+    text: "成獣雄が鼻部を膨らませるフード状の構造を持ちますか？"
+    yes_subtree: "Cystophora"
+    no_subtree: "Phocidae_minus_Cystophora"
+    refs: ["FAO Marine Mammals"]
+    confidence: 0.95
+
+  - id: P2
+    text: "成獣雄で鼻が長大に伸長しますか？"
+    yes_subtree: "Mirounga"
+    no_subtree: "Phocidae_minus_Cystophora_Mirounga"
+    refs: ["FAO Marine Mammals"]
+    confidence: 0.95
+
+  - id: P3
+    text: "体表に明瞭なリング状（輪紋）の斑紋がありますか？"
+    yes_subtree: "Pusa"
+    no_subtree: "Phocidae_minus_Cystophora_Mirounga_Pusa"
+    refs: ["Riedman 1990"]
+    confidence: 0.90
+
+  - id: P4
+    text: "体表に帯状（バンド状/リボン状）の明瞭な模様がありますか？"
+    yes_subtree: "Histriophoca"
+    no_subtree: "Phocidae_minus_Cystophora_Mirounga_Pusa_Histriophoca"
+    refs: ["Riedman 1990"]
+    confidence: 0.92
+
+  - id: P5
+    text: "成獣雄の頸部に長いたてがみ状の毛がありますか？"
+    yes_subtree: "Halichoerus"
+    no_subtree: "Phocidae_minus_Cystophora_Mirounga_Pusa_Histriophoca_Halichoerus"
+    refs: ["Riedman 1990"]
+    confidence: 0.88
+
+  - id: P6
+    text: "幼獣が純白（ホワイトコート）の産毛を持ちますか？"
+    yes_subtree: "Pagophilus"
+    no_subtree: "Phocidae_minus_iceseals"
+    refs: ["Riedman 1990"]
+    confidence: 0.85
+
+  - id: P7
+    text: "背部に鞍型（サドル型）の暗色斑がありますか？"
+    yes_subtree: "Pagophilus"
+    no_subtree: "Phocidae_other"
+    refs: ["FAO Marine Mammals"]
+    confidence: 0.88
+
+  - id: P8
+    text: "体が比較的大きく（成獣で2m以上）、吻が長めですか？"
+    yes_subtree: "Halichoerus"
+    no_subtree: "Phocidae_smaller"
+    refs: ["Riedman 1990"]
+    confidence: 0.75
+
+  - id: P9
+    text: "体表に小さなゴマ状の斑点が散在しますか？"
+    yes_subtree: "Phoca"
+    no_subtree: "Phocidae_no_spots"
+    refs: ["Riedman 1990"]
+    confidence: 0.82
+
+  - id: P10
+    text: "淡水（湖沼）に生息しますか？"
+    yes_subtree: "freshwater_seals"
+    no_subtree: "marine_seals"
+    refs: ["Riedman 1990"]
+    confidence: 0.90
+
+  - id: P11
+    text: "南極周辺に生息しますか？"
+    yes_subtree: "antarctic_seals"
+    no_subtree: "non_antarctic_seals"
+    refs: ["Riedman 1990"]
+    confidence: 0.85
+
+  - id: P12
+    text: "頭骨の眼窩間幅が狭く、鼻骨が長いですか？"
+    yes_subtree: "Phoca"
+    no_subtree: "Phoca_relatives"
+    refs: ["Berta & Churchill 2012"]
+    confidence: 0.80
+
+  - id: P13
+    text: "成獣で体長3m以上になる大型種ですか？"
+    yes_subtree: "large_seals"
+    no_subtree: "medium_small_seals"
+    refs: ["Riedman 1990"]
+    confidence: 0.85
+
+  - id: P14
+    text: "歯が櫛状（濾過摂食用）に特殊化していますか？"
+    yes_subtree: "Lobodon"
+    no_subtree: "non_filter_seals"
+    refs: ["Riedman 1990"]
+    confidence: 0.95
+
+# ===== アザラシ科の属 =====
+Cystophora:
+  hint: "鼻部にフード状の膨張構造を持つズキンアザラシ属"
+  rank: genus
+  parent: Phocidae
+
+Mirounga:
+  hint: "雄の鼻が長大に伸長するゾウアザラシ属"
+  rank: genus
+  parent: Phocidae
+
+Phoca:
+  hint: "ゴマ状斑点を持つゴマフアザラシ属"
+  rank: genus
+  parent: Phocidae
+
+Pusa:
+  hint: "輪紋を持つワモンアザラシ属"
+  rank: genus
+  parent: Phocidae
+
+Halichoerus:
+  hint: "長い吻を持つハイイロアザラシ属"
+  rank: genus
+  parent: Phocidae
+
+Pagophilus:
+  hint: "背部に鞍型斑を持つタテゴトアザラシ属"
+  rank: genus
+  parent: Phocidae
+
+Histriophoca:
+  hint: "帯状模様を持つクラカケアザラシ属"
+  rank: genus
+  parent: Phocidae
+
+Erignathus:
+  hint: "大きな髭を持つアゴヒゲアザラシ属"
+  rank: genus
+  parent: Phocidae
+
+Monachus:
+  hint: "熱帯・亜熱帯に生息するモンクアザラシ属"
+  rank: genus
+  parent: Phocidae
+
+Lobodon:
+  hint: "櫛状の歯を持つカニクイアザラシ属"
+  rank: genus
+  parent: Phocidae
+
+Leptonychotes:
+  hint: "ウェッデル海に多いウェッデルアザラシ属"
+  rank: genus
+  parent: Phocidae
+
+Hydrurga:
+  hint: "長い体と大きな口を持つヒョウアザラシ属"
+  rank: genus
+  parent: Phocidae
+
+Ommatophoca:
+  hint: "大きな眼を持つロスアザラシ属"
+  rank: genus
+  parent: Phocidae
+
+# ===== アザラシ科の種（代表例） =====
+Phoca_vitulina:
+  hint: "北半球の沿岸に広く分布するゼニガタアザラシ"
+  rank: species
+  parent: Phoca
+  vernacular: "ゼニガタアザラシ"
+  synonyms: ["Harbour seal", "Common seal"]
+
+Phoca_largha:
+  hint: "北太平洋に分布し明瞭なゴマ斑を持つゴマフアザラシ"
+  rank: species
+  parent: Phoca
+  vernacular: "ゴマフアザラシ"
+  synonyms: ["Spotted seal", "Largha seal"]
+
+Mirounga_angustirostris:
+  hint: "北太平洋に分布するキタゾウアザラシ"
+  rank: species
+  parent: Mirounga
+  vernacular: "キタゾウアザラシ"
+  synonyms: ["Northern elephant seal"]
+
+Mirounga_leonina:
+  hint: "南半球に分布するミナミゾウアザラシ"
+  rank: species
+  parent: Mirounga
+  vernacular: "ミナミゾウアザラシ"
+  synonyms: ["Southern elephant seal"]
+
+Cystophora_cristata:
+  hint: "北大西洋に分布するズキンアザラシ"
+  rank: species
+  parent: Cystophora
+  vernacular: "ズキンアザラシ"
+  synonyms: ["Hooded seal"]
+
+Pusa_hispida:
+  hint: "北極圏に分布するワモンアザラシ"
+  rank: species
+  parent: Pusa
+  vernacular: "ワモンアザラシ"
+  synonyms: ["Ringed seal"]
+
+Pusa_sibirica:
+  hint: "バイカル湖固有のバイカルアザラシ"
+  rank: species
+  parent: Pusa
+  vernacular: "バイカルアザラシ"
+  synonyms: ["Baikal seal"]
+
+Halichoerus_grypus:
+  hint: "北大西洋・バルト海に分布するハイイロアザラシ"
+  rank: species
+  parent: Halichoerus
+  vernacular: "ハイイロアザラシ"
+  synonyms: ["Grey seal", "Gray seal"]
+
+Pagophilus_groenlandicus:
+  hint: "北大西洋の流氷域に分布するタテゴトアザラシ"
+  rank: species
+  parent: Pagophilus
+  vernacular: "タテゴトアザラシ"
+  synonyms: ["Harp seal"]
+
+Histriophoca_fasciata:
+  hint: "北太平洋に分布するクラカケアザラシ"
+  rank: species
+  parent: Histriophoca
+  vernacular: "クラカケアザラシ"
+  synonyms: ["Ribbon seal"]
+
+Erignathus_barbatus:
+  hint: "北極圏に分布するアゴヒゲアザラシ"
+  rank: species
+  parent: Erignathus
+  vernacular: "アゴヒゲアザラシ"
+  synonyms: ["Bearded seal"]
+
+Lobodon_carcinophaga:
+  hint: "南極周辺に分布するカニクイアザラシ"
+  rank: species
+  parent: Lobodon
+  vernacular: "カニクイアザラシ"
+  synonyms: ["Crabeater seal"]
+
+Hydrurga_leptonyx:
+  hint: "南極周辺に分布するヒョウアザラシ"
+  rank: species
+  parent: Hydrurga
+  vernacular: "ヒョウアザラシ"
+  synonyms: ["Leopard seal"]
+
+Leptonychotes_weddellii:
+  hint: "南極大陸周辺に分布するウェッデルアザラシ"
+  rank: species
+  parent: Leptonychotes
+  vernacular: "ウェッデルアザラシ"
+  synonyms: ["Weddell seal"]
+
+Ommatophoca_rossii:
+  hint: "南極の流氷域に分布するロスアザラシ"
+  rank: species
+  parent: Ommatophoca
+  vernacular: "ロスアザラシ"
+  synonyms: ["Ross seal"]
+
+Monachus_monachus:
+  hint: "地中海に分布するチチュウカイモンクアザラシ"
+  rank: species
+  parent: Monachus
+  vernacular: "チチュウカイモンクアザラシ"
+  synonyms: ["Mediterranean monk seal"]
+
+Neomonachus_schauinslandi:
+  hint: "ハワイ諸島に分布するハワイモンクアザラシ"
+  rank: species
+  parent: Monachus
+  vernacular: "ハワイモンクアザラシ"
+  synonyms: ["Hawaiian monk seal"]
+
+# ===== 鳥類の目（代表例） =====
+Struthioniformes:
+  hint: "飛べない大型の走鳥類（ダチョウ）"
+  rank: order
+  parent: Aves
+
+Anseriformes:
+  hint: "扁平な嘴と水かきを持つカモ目"
+  rank: order
+  parent: Aves
+
+Galliformes:
+  hint: "地上性で短い翼のキジ目"
+  rank: order
+  parent: Aves
+
+Columbiformes:
+  hint: "小さな頭と豊かな羽毛のハト目"
+  rank: order
+  parent: Aves
+
+Passeriformes:
+  hint: "鳴管が発達したスズメ目（鳴禽類）"
+  rank: order
+  parent: Aves
+
+Falconiformes:
+  hint: "鉤状の嘴と鋭い爪を持つハヤブサ目"
+  rank: order
+  parent: Aves
+
+Accipitriformes:
+  hint: "大型の猛禽類（タカ・ワシ）"
+  rank: order
+  parent: Aves
+
+Strigiformes:
+  hint: "夜行性で前向きの眼を持つフクロウ目"
+  rank: order
+  parent: Aves
+
+Sphenisciformes:
+  hint: "翼がフリッパー状に変化したペンギン目"
+  rank: order
+  parent: Aves
+
+Charadriiformes:
+  hint: "水辺に生息するチドリ目（シギ・チドリ）"
+  rank: order
+  parent: Aves
+
+# ===== 爬虫類の目 =====
+Testudines:
+  hint: "甲羅を持つカメ目"
+  rank: order
+  parent: Reptilia
+
+Squamata:
+  hint: "鱗を持つ有鱗目（トカゲ・ヘビ）"
+  rank: order
+  parent: Reptilia
+
+Crocodylia:
+  hint: "半水生で長い吻を持つワニ目"
+  rank: order
+  parent: Reptilia
+
+Rhynchocephalia:
+  hint: "ムカシトカゲ目（ニュージーランド固有）"
+  rank: order
+  parent: Reptilia
+
+# ===== 両生類の目 =====
+Anura:
+  hint: "成体で尾がない無尾目（カエル）"
+  rank: order
+  parent: Amphibia
+
+Urodela:
+  hint: "成体でも尾がある有尾目（サンショウウオ・イモリ）"
+  rank: order
+  parent: Amphibia
+
+Gymnophiona:
+  hint: "四肢がない無足目（アシナシイモリ）"
+  rank: order
+  parent: Amphibia
+
+# ===== 節足動物の綱 =====
+Insecta:
+  hint: "体が頭・胸・腹の3部に分かれ、6本の脚を持つ昆虫綱"
+  rank: class
+  parent: Arthropoda
+
+Arachnida:
+  hint: "8本の脚を持ち、触角がないクモ綱"
+  rank: class
+  parent: Arthropoda
+
+Crustacea:
+  hint: "2対の触角と鰓呼吸の甲殻綱"
+  rank: class
+  parent: Arthropoda
+
+Myriapoda:
+  hint: "多数の体節と脚を持つ多足綱"
+  rank: class
+  parent: Arthropoda
+
+# ===== 軟体動物の綱 =====
+Gastropoda:
+  hint: "1枚の貝殻または無殻の腹足綱（巻貝・ウミウシ）"
+  rank: class
+  parent: Mollusca
+
+Bivalvia:
+  hint: "2枚の貝殻を持つ二枚貝綱"
+  rank: class
+  parent: Mollusca
+
+Cephalopoda:
+  hint: "頭部に腕を持つ頭足綱（タコ・イカ）"
+  rank: class
+  parent: Mollusca

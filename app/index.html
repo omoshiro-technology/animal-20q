@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal 20Q: Taxonomy Edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Animal 20Q</h1>
+      <p class="subtitle">分類学的特徴で動物を当てよう</p>
+    </header>
+
+    <nav class="breadcrumb" id="breadcrumb">
+      <span class="crumb">Animalia</span>
+    </nav>
+
+    <main>
+      <div id="loading" class="screen">
+        <p>データを読み込み中...</p>
+      </div>
+
+      <div id="start-screen" class="screen hidden">
+        <h2>動物分類ゲーム</h2>
+        <p>Yes/No の質問に答えて、思い浮かべた動物を当てます。</p>
+        <p>分類学の特徴（形態・解剖学的特徴）に基づく質問のみが出題されます。</p>
+        <button id="start-btn" class="btn primary">ゲーム開始</button>
+      </div>
+
+      <div id="game-screen" class="screen hidden">
+        <div class="question-area">
+          <p class="question-number">質問 <span id="q-num">1</span></p>
+          <p class="question-text" id="question-text">質問テキスト</p>
+          <div class="question-meta" id="question-meta">
+            <span class="confidence" id="confidence">確信度: --</span>
+            <span class="sources" id="sources">出典: --</span>
+          </div>
+        </div>
+
+        <div class="candidates-info">
+          <p>残り候補: <span id="candidates-count">--</span> タクソン</p>
+        </div>
+
+        <div class="button-group">
+          <button id="yes-btn" class="btn yes">はい</button>
+          <button id="no-btn" class="btn no">いいえ</button>
+        </div>
+
+        <div class="skip-area">
+          <button id="skip-btn" class="btn secondary">わからない</button>
+        </div>
+      </div>
+
+      <div id="result-screen" class="screen hidden">
+        <div class="result-card" id="result-card">
+          <h2 id="result-title">結果</h2>
+          <div id="result-content"></div>
+        </div>
+        <button id="retry-btn" class="btn primary">もう一度遊ぶ</button>
+      </div>
+
+      <div id="error-screen" class="screen hidden">
+        <h2>エラー</h2>
+        <p id="error-message">データの読み込みに失敗しました。</p>
+        <button id="reload-btn" class="btn primary">再読み込み</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <a href="#" id="credits-link">出典・ライセンス</a> |
+        <a href="https://github.com/noro/animal_quiz" target="_blank">GitHub</a>
+      </p>
+    </footer>
+
+    <div id="credits-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>出典・ライセンス</h3>
+        <div id="credits-content">
+          <p>分類データ:</p>
+          <ul>
+            <li>Catalogue of Life (CoL)</li>
+            <li>NCBI Taxonomy</li>
+            <li>Wikimedia (概要取得)</li>
+          </ul>
+        </div>
+        <button id="close-credits" class="btn secondary">閉じる</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

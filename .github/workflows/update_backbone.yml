@@ -1,0 +1,89 @@
+name: Update backbone weekly
+on:
+  schedule:
+    - cron: "0 3 * * 1"   # Every Monday at 03:00 UTC
+  workflow_dispatch:       # Allow manual trigger
+
+jobs:
+  update-backbone:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -U pandas lxml requests pyyaml
+
+      - name: Create backbone directory
+        run: |
+          mkdir -p data/backbone/col
+          mkdir -p data/backbone/ncbi
+
+      - name: Fetch CoL data
+        run: |
+          python scripts/fetch_backbone.py --source col --out data/backbone/col/
+        continue-on-error: true
+
+      - name: Fetch NCBI data
+        run: |
+          python scripts/fetch_backbone.py --source ncbi --out data/backbone/ncbi/
+        continue-on-error: true
+
+      - name: Build taxonomy.jsonl
+        run: |
+          # Try CoL first, fall back to NCBI
+          if [ -d "data/backbone/col" ] && [ "$(ls -A data/backbone/col 2>/dev/null)" ]; then
+            python scripts/build_taxonomy.py --col data/backbone/col/ --out data/taxonomy.jsonl
+          elif [ -d "data/backbone/ncbi" ] && [ "$(ls -A data/backbone/ncbi 2>/dev/null)" ]; then
+            python scripts/build_taxonomy.py --ncbi data/backbone/ncbi/ --out data/taxonomy.jsonl
+          else
+            echo "No backbone data available, skipping build"
+            exit 0
+          fi
+
+      - name: Copy to Pages
+        run: |
+          python scripts/copy_to_pages.py --data data/ --docs docs/
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore(backbone): refresh taxonomy data"
+          title: "Backbone refresh (weekly)"
+          body: |
+            ## Summary
+            - Updated taxonomy.jsonl from latest CoL/NCBI data
+            - Synced data to docs/ for GitHub Pages
+
+            ## Review checklist
+            - [ ] Verify taxonomy.jsonl contains expected Animalia taxa
+            - [ ] Check for any removed/renamed taxa
+
+            ---
+            🤖 Generated automatically by GitHub Actions
+          branch: chore/backbone-refresh
+          delete-branch: true
+          labels: |
+            automated
+            data-update

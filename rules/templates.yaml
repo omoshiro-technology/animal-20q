@@ -1,0 +1,36 @@
+# Question templates by taxonomic rank
+# {parent}: 親ノードの名前
+# {hint}: 形質のヒント
+# {target}: 対象の分類群名
+
+kingdom:
+  question_template: "{hint}を持っていますか？"
+
+phylum:
+  question_template: "{hint}がありますか？"
+
+subphylum:
+  question_template: "{hint}を持っていますか？"
+
+class:
+  question_template: "{hint}がありますか？"
+
+order:
+  question_template: "{hint}を持っていますか？"
+
+family:
+  question_template: "{hint}がありますか？"
+
+genus:
+  question_template: "{hint}を持っていますか？"
+
+species:
+  question_template: "{hint}がありますか？"
+
+# Generic fallback template
+default:
+  question_template: "{target}に典型的な{hint}がありますか？"
+
+# Template for binary splits without specific traits
+binary_split:
+  question_template: "{target}のグループに属しますか？"

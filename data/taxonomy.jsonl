@@ -1,0 +1,93 @@
+{"taxonID":"Animalia","parentID":null,"rank":"kingdom","scientificName":"Animalia","vernacularName":"動物界","children":["Porifera","Cnidaria","Platyhelminthes","Nematoda","Annelida","Mollusca","Arthropoda","Echinodermata","Chordata"]}
+{"taxonID":"Porifera","parentID":"Animalia","rank":"phylum","scientificName":"Porifera","vernacularName":"海綿動物門","children":[]}
+{"taxonID":"Cnidaria","parentID":"Animalia","rank":"phylum","scientificName":"Cnidaria","vernacularName":"刺胞動物門","children":[]}
+{"taxonID":"Platyhelminthes","parentID":"Animalia","rank":"phylum","scientificName":"Platyhelminthes","vernacularName":"扁形動物門","children":[]}
+{"taxonID":"Nematoda","parentID":"Animalia","rank":"phylum","scientificName":"Nematoda","vernacularName":"線形動物門","children":[]}
+{"taxonID":"Annelida","parentID":"Animalia","rank":"phylum","scientificName":"Annelida","vernacularName":"環形動物門","children":[]}
+{"taxonID":"Mollusca","parentID":"Animalia","rank":"phylum","scientificName":"Mollusca","vernacularName":"軟体動物門","children":["Gastropoda","Bivalvia","Cephalopoda"]}
+{"taxonID":"Gastropoda","parentID":"Mollusca","rank":"class","scientificName":"Gastropoda","vernacularName":"腹足綱","children":[]}
+{"taxonID":"Bivalvia","parentID":"Mollusca","rank":"class","scientificName":"Bivalvia","vernacularName":"二枚貝綱","children":[]}
+{"taxonID":"Cephalopoda","parentID":"Mollusca","rank":"class","scientificName":"Cephalopoda","vernacularName":"頭足綱","children":[]}
+{"taxonID":"Arthropoda","parentID":"Animalia","rank":"phylum","scientificName":"Arthropoda","vernacularName":"節足動物門","children":["Insecta","Arachnida","Crustacea","Myriapoda"]}
+{"taxonID":"Insecta","parentID":"Arthropoda","rank":"class","scientificName":"Insecta","vernacularName":"昆虫綱","children":[]}
+{"taxonID":"Arachnida","parentID":"Arthropoda","rank":"class","scientificName":"Arachnida","vernacularName":"クモ綱","children":[]}
+{"taxonID":"Crustacea","parentID":"Arthropoda","rank":"class","scientificName":"Crustacea","vernacularName":"甲殻綱","children":[]}
+{"taxonID":"Myriapoda","parentID":"Arthropoda","rank":"class","scientificName":"Myriapoda","vernacularName":"多足綱","children":[]}
+{"taxonID":"Echinodermata","parentID":"Animalia","rank":"phylum","scientificName":"Echinodermata","vernacularName":"棘皮動物門","children":[]}
+{"taxonID":"Chordata","parentID":"Animalia","rank":"phylum","scientificName":"Chordata","vernacularName":"脊索動物門","children":["Vertebrata","Tunicata","Cephalochordata"]}
+{"taxonID":"Tunicata","parentID":"Chordata","rank":"subphylum","scientificName":"Tunicata","vernacularName":"尾索動物亜門","children":[]}
+{"taxonID":"Cephalochordata","parentID":"Chordata","rank":"subphylum","scientificName":"Cephalochordata","vernacularName":"頭索動物亜門","children":[]}
+{"taxonID":"Vertebrata","parentID":"Chordata","rank":"subphylum","scientificName":"Vertebrata","vernacularName":"脊椎動物亜門","children":["Agnatha","Chondrichthyes","Osteichthyes","Amphibia","Reptilia","Aves","Mammalia"]}
+{"taxonID":"Agnatha","parentID":"Vertebrata","rank":"class","scientificName":"Agnatha","vernacularName":"無顎綱","children":[]}
+{"taxonID":"Chondrichthyes","parentID":"Vertebrata","rank":"class","scientificName":"Chondrichthyes","vernacularName":"軟骨魚綱","children":[]}
+{"taxonID":"Osteichthyes","parentID":"Vertebrata","rank":"class","scientificName":"Osteichthyes","vernacularName":"硬骨魚綱","children":[]}
+{"taxonID":"Amphibia","parentID":"Vertebrata","rank":"class","scientificName":"Amphibia","vernacularName":"両生綱","children":["Anura","Urodela","Gymnophiona"]}
+{"taxonID":"Anura","parentID":"Amphibia","rank":"order","scientificName":"Anura","vernacularName":"無尾目","children":[]}
+{"taxonID":"Urodela","parentID":"Amphibia","rank":"order","scientificName":"Urodela","vernacularName":"有尾目","children":[]}
+{"taxonID":"Gymnophiona","parentID":"Amphibia","rank":"order","scientificName":"Gymnophiona","vernacularName":"無足目","children":[]}
+{"taxonID":"Reptilia","parentID":"Vertebrata","rank":"class","scientificName":"Reptilia","vernacularName":"爬虫綱","children":["Testudines","Squamata","Crocodylia","Rhynchocephalia"]}
+{"taxonID":"Testudines","parentID":"Reptilia","rank":"order","scientificName":"Testudines","vernacularName":"カメ目","children":[]}
+{"taxonID":"Squamata","parentID":"Reptilia","rank":"order","scientificName":"Squamata","vernacularName":"有鱗目","children":[]}
+{"taxonID":"Crocodylia","parentID":"Reptilia","rank":"order","scientificName":"Crocodylia","vernacularName":"ワニ目","children":[]}
+{"taxonID":"Rhynchocephalia","parentID":"Reptilia","rank":"order","scientificName":"Rhynchocephalia","vernacularName":"ムカシトカゲ目","children":[]}
+{"taxonID":"Aves","parentID":"Vertebrata","rank":"class","scientificName":"Aves","vernacularName":"鳥綱","children":["Struthioniformes","Anseriformes","Galliformes","Columbiformes","Passeriformes","Falconiformes","Accipitriformes","Strigiformes","Sphenisciformes","Charadriiformes"]}
+{"taxonID":"Struthioniformes","parentID":"Aves","rank":"order","scientificName":"Struthioniformes","vernacularName":"ダチョウ目","children":[]}
+{"taxonID":"Anseriformes","parentID":"Aves","rank":"order","scientificName":"Anseriformes","vernacularName":"カモ目","children":[]}
+{"taxonID":"Galliformes","parentID":"Aves","rank":"order","scientificName":"Galliformes","vernacularName":"キジ目","children":[]}
+{"taxonID":"Columbiformes","parentID":"Aves","rank":"order","scientificName":"Columbiformes","vernacularName":"ハト目","children":[]}
+{"taxonID":"Passeriformes","parentID":"Aves","rank":"order","scientificName":"Passeriformes","vernacularName":"スズメ目","children":[]}
+{"taxonID":"Falconiformes","parentID":"Aves","rank":"order","scientificName":"Falconiformes","vernacularName":"ハヤブサ目","children":[]}
+{"taxonID":"Accipitriformes","parentID":"Aves","rank":"order","scientificName":"Accipitriformes","vernacularName":"タカ目","children":[]}
+{"taxonID":"Strigiformes","parentID":"Aves","rank":"order","scientificName":"Strigiformes","vernacularName":"フクロウ目","children":[]}
+{"taxonID":"Sphenisciformes","parentID":"Aves","rank":"order","scientificName":"Sphenisciformes","vernacularName":"ペンギン目","children":[]}
+{"taxonID":"Charadriiformes","parentID":"Aves","rank":"order","scientificName":"Charadriiformes","vernacularName":"チドリ目","children":[]}
+{"taxonID":"Mammalia","parentID":"Vertebrata","rank":"class","scientificName":"Mammalia","vernacularName":"哺乳綱","children":["Monotremata","Marsupialia","Rodentia","Lagomorpha","Chiroptera","Primates","Carnivora","Cetacea","Sirenia","Proboscidea","Perissodactyla","Artiodactyla"]}
+{"taxonID":"Monotremata","parentID":"Mammalia","rank":"order","scientificName":"Monotremata","vernacularName":"単孔目","children":[]}
+{"taxonID":"Marsupialia","parentID":"Mammalia","rank":"order","scientificName":"Marsupialia","vernacularName":"有袋目","children":[]}
+{"taxonID":"Rodentia","parentID":"Mammalia","rank":"order","scientificName":"Rodentia","vernacularName":"齧歯目","children":[]}
+{"taxonID":"Lagomorpha","parentID":"Mammalia","rank":"order","scientificName":"Lagomorpha","vernacularName":"ウサギ目","children":[]}
+{"taxonID":"Chiroptera","parentID":"Mammalia","rank":"order","scientificName":"Chiroptera","vernacularName":"翼手目","children":[]}
+{"taxonID":"Primates","parentID":"Mammalia","rank":"order","scientificName":"Primates","vernacularName":"霊長目","children":[]}
+{"taxonID":"Carnivora","parentID":"Mammalia","rank":"order","scientificName":"Carnivora","vernacularName":"食肉目","children":["Canidae","Felidae","Ursidae","Mustelidae","Otariidae","Odobenidae","Phocidae"]}
+{"taxonID":"Cetacea","parentID":"Mammalia","rank":"order","scientificName":"Cetacea","vernacularName":"クジラ目","children":[]}
+{"taxonID":"Sirenia","parentID":"Mammalia","rank":"order","scientificName":"Sirenia","vernacularName":"海牛目","children":[]}
+{"taxonID":"Proboscidea","parentID":"Mammalia","rank":"order","scientificName":"Proboscidea","vernacularName":"長鼻目","children":[]}
+{"taxonID":"Perissodactyla","parentID":"Mammalia","rank":"order","scientificName":"Perissodactyla","vernacularName":"奇蹄目","children":[]}
+{"taxonID":"Artiodactyla","parentID":"Mammalia","rank":"order","scientificName":"Artiodactyla","vernacularName":"偶蹄目","children":[]}
+{"taxonID":"Canidae","parentID":"Carnivora","rank":"family","scientificName":"Canidae","vernacularName":"イヌ科","children":[]}
+{"taxonID":"Felidae","parentID":"Carnivora","rank":"family","scientificName":"Felidae","vernacularName":"ネコ科","children":[]}
+{"taxonID":"Ursidae","parentID":"Carnivora","rank":"family","scientificName":"Ursidae","vernacularName":"クマ科","children":[]}
+{"taxonID":"Mustelidae","parentID":"Carnivora","rank":"family","scientificName":"Mustelidae","vernacularName":"イタチ科","children":[]}
+{"taxonID":"Otariidae","parentID":"Carnivora","rank":"family","scientificName":"Otariidae","vernacularName":"アシカ科","children":[]}
+{"taxonID":"Odobenidae","parentID":"Carnivora","rank":"family","scientificName":"Odobenidae","vernacularName":"セイウチ科","children":[]}
+{"taxonID":"Phocidae","parentID":"Carnivora","rank":"family","scientificName":"Phocidae","vernacularName":"アザラシ科","children":["Cystophora","Mirounga","Phoca","Pusa","Halichoerus","Pagophilus","Histriophoca","Erignathus","Monachus","Lobodon","Leptonychotes","Hydrurga","Ommatophoca"]}
+{"taxonID":"Cystophora","parentID":"Phocidae","rank":"genus","scientificName":"Cystophora","vernacularName":"ズキンアザラシ属","children":["Cystophora_cristata"]}
+{"taxonID":"Cystophora_cristata","parentID":"Cystophora","rank":"species","scientificName":"Cystophora cristata","vernacularName":"ズキンアザラシ","synonyms":["Hooded seal"]}
+{"taxonID":"Mirounga","parentID":"Phocidae","rank":"genus","scientificName":"Mirounga","vernacularName":"ゾウアザラシ属","children":["Mirounga_angustirostris","Mirounga_leonina"]}
+{"taxonID":"Mirounga_angustirostris","parentID":"Mirounga","rank":"species","scientificName":"Mirounga angustirostris","vernacularName":"キタゾウアザラシ","synonyms":["Northern elephant seal"]}
+{"taxonID":"Mirounga_leonina","parentID":"Mirounga","rank":"species","scientificName":"Mirounga leonina","vernacularName":"ミナミゾウアザラシ","synonyms":["Southern elephant seal"]}
+{"taxonID":"Phoca","parentID":"Phocidae","rank":"genus","scientificName":"Phoca","vernacularName":"ゴマフアザラシ属","children":["Phoca_vitulina","Phoca_largha"]}
+{"taxonID":"Phoca_vitulina","parentID":"Phoca","rank":"species","scientificName":"Phoca vitulina","vernacularName":"ゼニガタアザラシ","synonyms":["Harbour seal","Common seal"]}
+{"taxonID":"Phoca_largha","parentID":"Phoca","rank":"species","scientificName":"Phoca largha","vernacularName":"ゴマフアザラシ","synonyms":["Spotted seal","Largha seal"]}
+{"taxonID":"Pusa","parentID":"Phocidae","rank":"genus","scientificName":"Pusa","vernacularName":"ワモンアザラシ属","children":["Pusa_hispida","Pusa_sibirica"]}
+{"taxonID":"Pusa_hispida","parentID":"Pusa","rank":"species","scientificName":"Pusa hispida","vernacularName":"ワモンアザラシ","synonyms":["Ringed seal"]}
+{"taxonID":"Pusa_sibirica","parentID":"Pusa","rank":"species","scientificName":"Pusa sibirica","vernacularName":"バイカルアザラシ","synonyms":["Baikal seal"]}
+{"taxonID":"Halichoerus","parentID":"Phocidae","rank":"genus","scientificName":"Halichoerus","vernacularName":"ハイイロアザラシ属","children":["Halichoerus_grypus"]}
+{"taxonID":"Halichoerus_grypus","parentID":"Halichoerus","rank":"species","scientificName":"Halichoerus grypus","vernacularName":"ハイイロアザラシ","synonyms":["Grey seal","Gray seal"]}
+{"taxonID":"Pagophilus","parentID":"Phocidae","rank":"genus","scientificName":"Pagophilus","vernacularName":"タテゴトアザラシ属","children":["Pagophilus_groenlandicus"]}
+{"taxonID":"Pagophilus_groenlandicus","parentID":"Pagophilus","rank":"species","scientificName":"Pagophilus groenlandicus","vernacularName":"タテゴトアザラシ","synonyms":["Harp seal"]}
+{"taxonID":"Histriophoca","parentID":"Phocidae","rank":"genus","scientificName":"Histriophoca","vernacularName":"クラカケアザラシ属","children":["Histriophoca_fasciata"]}
+{"taxonID":"Histriophoca_fasciata","parentID":"Histriophoca","rank":"species","scientificName":"Histriophoca fasciata","vernacularName":"クラカケアザラシ","synonyms":["Ribbon seal"]}
+{"taxonID":"Erignathus","parentID":"Phocidae","rank":"genus","scientificName":"Erignathus","vernacularName":"アゴヒゲアザラシ属","children":["Erignathus_barbatus"]}
+{"taxonID":"Erignathus_barbatus","parentID":"Erignathus","rank":"species","scientificName":"Erignathus barbatus","vernacularName":"アゴヒゲアザラシ","synonyms":["Bearded seal"]}
+{"taxonID":"Monachus","parentID":"Phocidae","rank":"genus","scientificName":"Monachus","vernacularName":"モンクアザラシ属","children":["Monachus_monachus","Neomonachus_schauinslandi"]}
+{"taxonID":"Monachus_monachus","parentID":"Monachus","rank":"species","scientificName":"Monachus monachus","vernacularName":"チチュウカイモンクアザラシ","synonyms":["Mediterranean monk seal"]}
+{"taxonID":"Neomonachus_schauinslandi","parentID":"Monachus","rank":"species","scientificName":"Neomonachus schauinslandi","vernacularName":"ハワイモンクアザラシ","synonyms":["Hawaiian monk seal"]}
+{"taxonID":"Lobodon","parentID":"Phocidae","rank":"genus","scientificName":"Lobodon","vernacularName":"カニクイアザラシ属","children":["Lobodon_carcinophaga"]}
+{"taxonID":"Lobodon_carcinophaga","parentID":"Lobodon","rank":"species","scientificName":"Lobodon carcinophaga","vernacularName":"カニクイアザラシ","synonyms":["Crabeater seal"]}
+{"taxonID":"Leptonychotes","parentID":"Phocidae","rank":"genus","scientificName":"Leptonychotes","vernacularName":"ウェッデルアザラシ属","children":["Leptonychotes_weddellii"]}
+{"taxonID":"Leptonychotes_weddellii","parentID":"Leptonychotes","rank":"species","scientificName":"Leptonychotes weddellii","vernacularName":"ウェッデルアザラシ","synonyms":["Weddell seal"]}
+{"taxonID":"Hydrurga","parentID":"Phocidae","rank":"genus","scientificName":"Hydrurga","vernacularName":"ヒョウアザラシ属","children":["Hydrurga_leptonyx"]}
+{"taxonID":"Hydrurga_leptonyx","parentID":"Hydrurga","rank":"species","scientificName":"Hydrurga leptonyx","vernacularName":"ヒョウアザラシ","synonyms":["Leopard seal"]}
+{"taxonID":"Ommatophoca","parentID":"Phocidae","rank":"genus","scientificName":"Ommatophoca","vernacularName":"ロスアザラシ属","children":["Ommatophoca_rossii"]}
+{"taxonID":"Ommatophoca_rossii","parentID":"Ommatophoca","rank":"species","scientificName":"Ommatophoca rossii","vernacularName":"ロスアザラシ","synonyms":["Ross seal"]}
