@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2025-01-28T00:00:00Z",
+  "taxonomy_snapshot_date": "2025-01",
+  "stats": {
+    "total_nodes": 93,
+    "nodes_with_questions": 0,
+    "total_questions": 50,
+    "llm_generated": 0
+  },
+  "completed_nodes": [],
+  "pending_nodes": [],
+  "last_processed_index": 0,
+  "notes": "進捗管理ファイル。どのノードまで処理したかを追跡。"
+}
