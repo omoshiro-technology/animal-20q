@@ -69,8 +69,8 @@ class Animal20Q {
   }
 
   async loadData() {
-    // Try to load from docs/ (GitHub Pages) or local data/
-    const basePaths = ['../docs/', '../data/', './'];
+    // Try to load from various paths (Vercel, GitHub Pages, local)
+    const basePaths = ['/data/', '../docs/', '../data/', './'];
     let loaded = false;
 
     for (const basePath of basePaths) {
