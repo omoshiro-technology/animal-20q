@@ -1,12 +1,13 @@
 name: Enrich questions
 on:
-  schedule:
-    - cron: "*/15 * * * *"
-  workflow_dispatch:
-    inputs:
-      max_drafts:
-        description: 'Maximum questions to generate'
-        default: '10'
+  push:
+  # schedule:
+  #   - cron: "*/15 * * * *"
+  # workflow_dispatch:
+  #   inputs:
+  #     max_drafts:
+  #       description: 'Maximum questions to generate'
+  #       default: '10'
 
 jobs:
   enrich:
